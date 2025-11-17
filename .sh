@@ -11,5 +11,5 @@ if flag local; then
 	sass src/_.scss dist/_.css --no-source-map
 	perl -0777 -pe 's/^[\S\s]+\/\/ BODY\n//g' dist/_.js > dist/_.js.tmp
 	mv dist/_.js.tmp dist/_.js
-	cp ../Characters.html index.html
+	cp ../Characters.html dist/index.html
 fi
