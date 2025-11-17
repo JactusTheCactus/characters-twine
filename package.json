@@ -11,7 +11,9 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "scss": "^0.2.4",
-    "typescript": "^5.9.3"
+    "scss": "^0.2.4"
+  },
+  "devDependencies": {
+    "@types/twine-sugarcube": "^2.37.2"
   }
 }

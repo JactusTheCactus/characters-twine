@@ -1,0 +1,44 @@
+<<set $omega to "\u03C9">>
+<<set $schwa to "\u0259">>
+<<set $acute to "\u0301">>
+<<set $grave to "\u0300">>
+<<set $male to "\u2642">>
+<<set $female to "\u2640">>
+<<set $character to {
+	hound: {
+		names: {
+			name: "Hound",
+			pronunciation: "H[a-u]nd"
+		},
+		species: "Changeling",
+		sex: "Female",
+		extra: [
+			"Shapeshifts into a large, black Wolf"
+		]
+	},
+	morrigan: {
+		names: {
+			name: "Morrigan",
+			pronunciation: "M"+$omega+$acute+"r"+$schwa+"gy"+$grave+"n"
+		},
+		species: "Reaper",
+		sex: "Female",
+		extra: [
+			"Wields a scythe",
+			"Killing Touch"
+		]
+	}
+}>>
+<<widget "char">><<set _c to $args[0]>>
+!@@text-decoration:underline;_c.names.name@@^^<<if _c.sex is "Female">>@@color:#f00;$female@@<<else>>@@color:#00f;$male@@<</if>>^^
+<dl>
+<dt>''Pronunciation''</dt>
+<dd><_c.names.pronunciation></dd>
+<dt>''Species''</dt>
+<dd>_c.species</dd>
+<dt>''Extra''</dt>
+	<<for _i range _c.extra>>
+		<dd>_i</dd>
+	<</for>>
+</dl>
+<</widget>>
