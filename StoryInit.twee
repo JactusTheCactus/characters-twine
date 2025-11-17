@@ -37,8 +37,8 @@
 <dt>''Species''</dt>
 <dd>_c.species</dd>
 <dt>''Extra''</dt>
-	<<for _i range _c.extra>>
-		<dd>_i</dd>
-	<</for>>
+<<for _i range _c.extra>>
+<dd>_i</dd>
+<</for>>
 </dl>
 <</widget>>
