@@ -1,6 +1,34 @@
+@use "sass:map";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 body {
-	font-size: 15pt;
+	font: 15pt "Noto Sans", sans-serif;
 	.passage {
 		font-size: 20pt;
+		.sex- {
+			@each $key,
+				$specs
+					in (
+						m: (
+							c: blue,
+							i: "\2642",
+						),
+						f: (
+							c: red,
+							i: "\2640",
+						),
+						n: (
+							c: purple,
+							i: "\26A5",
+						)
+					)
+			{
+				&-#{$key} {
+					color: #{map.get($specs, c)};
+					&::after {
+						content: "#{map.get($specs,i)}";
+					}
+				}
+			}
+		}
 	}
 }

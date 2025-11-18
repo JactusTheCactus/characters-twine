@@ -1,6 +1,26 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 body {
-  font-size: 15pt;
+  font: 15pt "Noto Sans", sans-serif;
 }
 body .passage {
   font-size: 20pt;
+}
+body .passage .sex--m {
+  color: blue;
+}
+body .passage .sex--m::after {
+  content: "♂";
+}
+body .passage .sex--f {
+  color: red;
+}
+body .passage .sex--f::after {
+  content: "♀";
+}
+body .passage .sex--n {
+  color: purple;
+}
+body .passage .sex--n::after {
+  content: "⚥";
 }

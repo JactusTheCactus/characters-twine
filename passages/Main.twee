@@ -1,0 +1,3 @@
+Please choose one of these <<print $charactersNames.length>> characters:
+# [[Morrigan|morrigan]]~~<<sex $characters.morrigan.sex>>~~
+# [[Hound|hound]]~~<<sex $characters.hound.sex>>~~
