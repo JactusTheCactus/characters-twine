@@ -8,18 +8,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - name: Use Go 6.1.0
+      - name: Use Go
         uses: actions/setup-go@v6
         with:
-          go-version: 6.1.x
+          go-version: 6.x.x
       - name: Build Site
         run: |
           go get github.com/tmedwards/tweego
           export PATH=$PATH:$(go env GOPATH)/bin
           tweego src/index.tw -o dist/index.html
+          echo ":: StoryStylesheet [stylesheet]" > src/StoryStylesheet.tw
+          sass src/.scss --no-source-map >> src/StoryStylesheet.tw
+          tweego src -o index.html
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         env:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: ./dist
+          publish_dir: ./
