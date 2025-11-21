@@ -26,7 +26,7 @@ jobs:
           tweego src -o index.html
       - name: Cleanup
         run: |
-          find . -name "*.zip" -exec echo {} \;
+          find . -name "*.zip" -exec rm {} \;
       - name: Commit Changes
         run: |
           git config --global user.name "github-actions[bot]"
