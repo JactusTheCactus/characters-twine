@@ -12,10 +12,16 @@ jobs:
         uses: actions/setup-go@v6
         with:
           go-version: stable
+      - name: Setup Tweego
+        run: |
+          TWEEDL_URL="https://github.com/tmedwards/tweego/releases/latest/download/tweego_linux64.zip"
+          curl -L "$TWEEDL_URL" -o tweego.zip
+          sudo mkdir -p /opt/tweego
+          sudo unzip tweego.zip -d /opt/tweego
+          sudo chmod +x /opt/tweego/tweego
+          echo "/opt/tweego" >> $GITHUB_PATH
       - name: Build Site
         run: |
-          go install github.com/tmedwards/tweego@v2
-          export PATH=$PATH:$(go env GOPATH)/bin
           tweego src/index.tw -o dist/index.html
           echo ":: StoryStylesheet [stylesheet]" > src/StoryStylesheet.tw
           sass src/.scss --no-source-map >> src/StoryStylesheet.tw
