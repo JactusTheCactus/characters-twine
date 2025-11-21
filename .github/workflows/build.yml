@@ -14,7 +14,7 @@ jobs:
           go-version: stable
       - name: Build Site
         run: |
-          go install github.com/tmedwards/tweego
+          go install github.com/tmedwards/tweego@latest
           export PATH=$PATH:$(go env GOPATH)/bin
           tweego src/index.tw -o dist/index.html
           echo ":: StoryStylesheet [stylesheet]" > src/StoryStylesheet.tw
