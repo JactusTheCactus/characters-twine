@@ -14,9 +14,9 @@ jobs:
           go-version: stable
       - name: Setup Tweego
         run: |
-          TWEGO_VERSION="v2.1.1"
+          TWEEGO_VERSION="v2.1.1"
           FILE="tweego-2.1.1-linux-x64.zip"
-          URL="https://github.com/tmedwards/tweego/releases/download/${TWEGO_VERSION}/${FILE}"
+          URL="https://github.com/tmedwards/tweego/releases/download/${TWEEGO_VERSION}/${FILE}"
           curl -L "$URL" -o "$FILE"
           ls -lh "$FILE"
           sudo mkdir -p /opt/tweego
@@ -25,7 +25,6 @@ jobs:
           echo "/opt/tweego" >> $GITHUB_PATH
       - name: Build Site
         run: |
-          tweego src/index.tw -o dist/index.html
           echo ":: StoryStylesheet [stylesheet]" > src/StoryStylesheet.tw
           sass src/.scss --no-source-map >> src/StoryStylesheet.tw
           tweego src -o index.html
