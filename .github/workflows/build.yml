@@ -14,7 +14,15 @@ jobs:
           go-version: stable
       - name: Setup Tweego
         run: |
-          brew install tweego
+          TWEGO_VERSION="v2.1.1"
+          FILE="tweego-2.1.1-linux-x64.zip"
+          URL="https://github.com/tmedwards/tweego/releases/download/${TWEGO_VERSION}/${FILE}"
+          curl -L "$URL" -o "$FILE"
+          ls -lh "$FILE"
+          sudo mkdir -p /opt/tweego
+          sudo unzip -o "$FILE" -d /opt/tweego
+          sudo chmod +x /opt/tweego/tweego
+          echo "/opt/tweego" >> $GITHUB_PATH
       - name: Build Site
         run: |
           tweego src/index.tw -o dist/index.html
