@@ -8,10 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - name: Use Go
-        uses: actions/setup-go@v6
-        with:
-          go-version: stable
       - name: Setup Tweego
         run: |
           TWEEGO_VERSION="v2.1.1"
@@ -28,9 +24,10 @@ jobs:
           echo ":: StoryStylesheet [stylesheet]" > src/StoryStylesheet.tw
           npx sass src/.scss --no-source-map >> src/StoryStylesheet.tw
           tweego src -o index.html
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        env:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: ./
+      - name: Commit Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Auto-commit: Update" || :
+          git push
