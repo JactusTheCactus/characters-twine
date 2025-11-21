@@ -1,3 +1,4 @@
+:: StoryInit
 <<set $u to {
 	omega: "\u03C9",
 	schwa: "\u0259",
@@ -11,17 +12,10 @@
 <<widget "sex">><<set _sex to $args[0]>><<if _sex is "Male"
 >>@@.sex--m;@@<<elseif _sex is "Female"
 >>@@.sex--f;@@<<else
->>@@.sex--n;@@<</if
->><</widget>>
+>>@@.sex--n;@@<</if>><</widget>>
 <<widget "char">><<set _c to $args[0]>>
-!~~<<sex _c.sex>>~~@@text-decoration:underline;_c.names.name@@
-<dl>
-	<dt>''Pronunciation''</dt>
-	<dd><_c.names.pronunciation></dd>
-	<dt>''Species''</dt>
-	<dd>_c.species</dd>
-	<<if _c.extra.length>><dt>''Extra''</dt>
-	<<for _i range _c.extra>>
-		<dd>_i</dd>
-	<</for>><</if>>
-</dl><</widget>>
+!_c.names.name^^<<sex _c.sex>>^^
+<dl><dt>''Pronunciation''</dt>
+<dd><_c.names.pronunciation></dd>
+<dt>''Species''</dt>
+<dd>_c.species</dd><<if _c.extra.length>><dt>''Extra''</dt><<for _i range _c.extra>><dd>_i</dd><</for>><</if>></dl><</widget>>

@@ -1,3 +1,4 @@
+:: characters
 <<set $characters to {}>>
 <<for _i range ["hound", "morrigan"]>>
 	<<set $characters[_i] to {
