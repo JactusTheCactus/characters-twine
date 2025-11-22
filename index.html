@@ -149,11 +149,7 @@ fetch("src/data.json")
 &gt;&gt;@@.sex--m;@@&lt;&lt;elseif _sex is &quot;Female&quot;
 &gt;&gt;@@.sex--f;@@&lt;&lt;else
 &gt;&gt;@@.sex--n;@@&lt;&lt;/if&gt;&gt;&lt;&lt;/widget&gt;&gt;
-&lt;&lt;widget &quot;char&quot;&gt;&gt;&lt;&lt;set _c to $characters[$args[0]]&gt;&gt;
-!_c.names.name^^&lt;&lt;sex _c.sex&gt;&gt;^^
-&lt;dl&gt;&lt;dt&gt;&#39;&#39;Pronunciation&#39;&#39;&lt;/dt&gt;
-&lt;dd&gt;&amp;lt;&lt;&lt;print _c.names.pronunciation&gt;&gt;&amp;gt;&lt;/dd&gt;&lt;dt&gt;&#39;&#39;Species&#39;&#39;&lt;/dt&gt;
-&lt;dd&gt;_c.species&lt;/dd&gt;&lt;&lt;if _c.extra.length&gt;&gt;&lt;dt&gt;&#39;&#39;Extra&#39;&#39;&lt;/dt&gt;&lt;&lt;for _i range _c.extra&gt;&gt;&lt;dd&gt;_i&lt;/dd&gt;&lt;&lt;/for&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;/dl&gt;&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="Main" tags="" position="350,100" size="100,100">Please choose one of these characters:
+&lt;&lt;widget &quot;char&quot;&gt;&gt;&lt;&lt;set _c to $characters[$args[0]]&gt;&gt;&lt;h1&gt;_c.names.name&lt;/h1&gt;^^&lt;&lt;sex _c.sex&gt;&gt;^^&lt;dl&gt;&lt;dt&gt;&#39;&#39;Pronunciation&#39;&#39;&lt;/dt&gt;&lt;dd&gt;&amp;lt;&lt;&lt;print _c.names.pronunciation&gt;&gt;&amp;gt;&lt;/dd&gt;&lt;dt&gt;&#39;&#39;Species&#39;&#39;&lt;/dt&gt;&lt;dd&gt;_c.species&lt;/dd&gt;&lt;&lt;if _c.extra.length&gt;&gt;&lt;dt&gt;&#39;&#39;Extra&#39;&#39;&lt;/dt&gt;&lt;&lt;for _i range _c.extra&gt;&gt;&lt;dd&gt;_i&lt;/dd&gt;&lt;&lt;/for&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;/dl&gt;&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="Main" tags="" position="350,100" size="100,100">Please choose one of these characters:
 # [[Morrigan|morrigan]]
 # [[Hound|hound]]</tw-passagedata><tw-passagedata pid="4" name="morrigan" tags="character" position="475,100" size="100,100">&lt;&lt;char &quot;morrigan&quot;&gt;&gt;</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
