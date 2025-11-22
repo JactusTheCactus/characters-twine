@@ -13,7 +13,13 @@ jobs:
           V=2.1.1
           TWEEGO_VERSION=v$V
           FILE=tweego-$V-linux-x64.zip
-          URL=https://github.com/tmedwards/tweego/releases/download/$TWEEGO_VERSION/$FILE
+          URL=https://github.com
+          URL+=/tmedwards
+          URL+=/tweego
+          URL+=/releases
+          URL+=/download
+          URL+=/$TWEEGO_VERSION
+          URL+=/$FILE
           curl -L $URL -o $FILE
           ls -lh $FILE
           sudo mkdir -p /opt/tweego
