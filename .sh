@@ -11,9 +11,36 @@ if flag local; then
 else
 	npm ci
 	alias sass="npx sass"
+	alias tsc="npx tsc"
 fi
-{
-	echo ":: StoryStylesheet [stylesheet]"
-	sass src/.scss --no-source-map
-} > "src/StoryStylesheet.tw"
+(
+	cd src
+	YML="$(cat data.yml)"
+	JSON="$(echo "$YML" | yq -o=json ".")"
+	JSON="$(echo "$JSON" | jq "del(._)")"
+	echo "$JSON" > data.json
+	getData() {
+		cat data.json | jq "$1"
+	}
+	{
+		echo ":: StoryStylesheet [stylesheet]"
+		sass .scss --no-source-map
+	} > css.tw
+	{
+		tmp="$(mktemp)"
+		echo ":: StoryScript [script]"
+		tsc _.ts --outFile "$tmp" --lib esnext,dom
+		cat "$tmp"
+		rm "$tmp"
+	} > js.tw
+	{
+		cat << EOF
+:: StoryTitle
+Characters
+
+:: StoryData
+EOF
+		getData ".init"
+	} > .tw
+)
 tweego src -o index.html

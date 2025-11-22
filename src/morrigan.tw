@@ -1,2 +1,2 @@
 :: morrigan [character]
-<<char $characters.morrigan>>
+<<char "morrigan">>

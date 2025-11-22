@@ -1,0 +1,19 @@
+:: StoryScript [script]
+State.variables.characters = {};
+fetch("src/data.json")
+    .then(function (response) { return response.json(); })
+    .then(function (data) {
+    Object.entries(data.characters)
+        .forEach(function (_a) {
+        var k = _a[0], v = _a[1];
+        var pron = v.names.pronunciation;
+        if (Array.isArray(pron)) {
+            pron = pron
+                .join("");
+        }
+        v.names.pronunciation = pron;
+        State.variables.characters[k] = v;
+    });
+    Engine.play("Main");
+})
+    .catch(function (error) { return console.error("Error loading JSON:", error); });

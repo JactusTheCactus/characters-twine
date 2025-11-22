@@ -1,2 +1,2 @@
 :: hound [character]
-<<char $characters.hound>>
+<<char "hound">>

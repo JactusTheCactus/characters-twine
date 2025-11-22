@@ -1,0 +1,37 @@
+_:
+  u:
+    - &omega "\u03C9"
+    - &schwa "\u0259"
+    # - &ezh "\u0292"
+    - &1 "\u0301"
+    - &2 "\u0300"
+  char: &char
+    names:
+      name: !!str
+      pronunciation: []
+    species: !!str
+    sex: "Neuter"
+    extra: []
+init:
+  ifid: 56336B7E-6043-4D9E-803A-8FF595EE359B
+  start: Main
+characters:
+  hound:
+    <<: *char
+    names:
+      name: Hound
+      pronunciation: ["H[a-u]nd"]
+    species: Changeling
+    sex: Female
+    extra:
+      - Shapeshifts into a large, black Wolf
+  morrigan:
+    <<: *char
+    names:
+      name: Morrigan
+      pronunciation: [M, *omega, *1, r, *schwa, gy, *2, "n"]
+    species: Reaper
+    sex: Female
+    extra:
+      - Wields a scythe
+      - Killing Touch
