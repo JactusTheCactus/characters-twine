@@ -2,10 +2,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 body {
-  font: 1em "Noto Sans", sans-serif;
-}
-body .passage {
-  font-size: 1em;
+  font-family: "Noto Sans", sans-serif;
 }
 body .passage .sex--m {
   color: blue;
