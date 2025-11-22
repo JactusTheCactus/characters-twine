@@ -14,12 +14,12 @@ jobs:
           TWEEGO_VERSION=v$V
           FILE=tweego-$V-linux-x64.zip
           URL=https://github.com/tmedwards/tweego/releases/download/$TWEEGO_VERSION/$FILE
-          curl -L "$URL" -o "$FILE"
-          ls -lh "$FILE"
+          curl -L $URL -o $FILE
+          ls -lh $FILE
           sudo mkdir -p /opt/tweego
-          sudo unzip -o "$FILE" -d /opt/tweego
+          sudo unzip -o $FILE -d /opt/tweego
           sudo chmod +x /opt/tweego/tweego
-          echo "/opt/tweego" >> $GITHUB_PATH
+          echo /opt/tweego >> $GITHUB_PATH
       - name: Build Site
         run: ./.sh
       - name: Cleanup
