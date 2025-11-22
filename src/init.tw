@@ -3,8 +3,4 @@
 >>@@.sex--m;@@<<elseif _sex is "Female"
 >>@@.sex--f;@@<<else
 >>@@.sex--n;@@<</if>><</widget>>
-<<widget "char">><<set _c to $characters[$args[0]]>>
-!_c.names.name^^<<sex _c.sex>>^^
-<dl><dt>''Pronunciation''</dt>
-<dd>&lt;<<print _c.names.pronunciation>>&gt;</dd><dt>''Species''</dt>
-<dd>_c.species</dd><<if _c.extra.length>><dt>''Extra''</dt><<for _i range _c.extra>><dd>_i</dd><</for>><</if>></dl><</widget>>
+<<widget "char">><<set _c to $characters[$args[0]]>><h1>_c.names.name</h1>^^<<sex _c.sex>>^^<dl><dt>''Pronunciation''</dt><dd>&lt;<<print _c.names.pronunciation>>&gt;</dd><dt>''Species''</dt><dd>_c.species</dd><<if _c.extra.length>><dt>''Extra''</dt><<for _i range _c.extra>><dd>_i</dd><</for>><</if>></dl><</widget>>
