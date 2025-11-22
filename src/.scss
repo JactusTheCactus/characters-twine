@@ -1,9 +1,9 @@
 @use "sass:map";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 body {
-	font: 15pt "Noto Sans", sans-serif;
+	font: 1em "Noto Sans", sans-serif;
 	.passage {
-		font-size: 20pt;
+		font-size: 1em;
 		.sex- {
 			@each $key,
 				$specs
