@@ -10,9 +10,10 @@ jobs:
       - uses: actions/checkout@v6
       - name: Setup Tweego
         run: |
-          TWEEGO_VERSION="v2.1.1"
-          FILE="tweego-2.1.1-linux-x64.zip"
-          URL="https://github.com/tmedwards/tweego/releases/download/${TWEEGO_VERSION}/${FILE}"
+          V=2.1.1
+          TWEEGO_VERSION=v$V
+          FILE=tweego-$V-linux-x64.zip
+          URL=https://github.com/tmedwards/tweego/releases/download/$TWEEGO_VERSION/$FILE
           curl -L "$URL" -o "$FILE"
           ls -lh "$FILE"
           sudo mkdir -p /opt/tweego
