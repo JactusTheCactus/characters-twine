@@ -17,9 +17,9 @@ mkdir -p dist
 rm dist/*
 YML="$(cat src/data.yml)"
 JSON="$(echo "$YML" | yq -o=json ".")"
-if ! flag local; then
+#if ! flag local; then
 	JSON="$(echo "$JSON" | jq "del(.characters._)")"
-fi
+#fi
 echo "$JSON" > "src/data.json"
 {
 	echo ":: StoryStylesheet [stylesheet]"
