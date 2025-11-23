@@ -20,7 +20,8 @@ characters:
     <<: *char
     names:
       name: Hound
-      pronunciation: ["H[a-u]nd"]
+      pronunciation:
+        - H[a-u]nd
     species: Changeling
     sex: Female
     extra:
