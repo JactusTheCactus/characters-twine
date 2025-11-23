@@ -23,15 +23,12 @@ fi
 echo "$JSON" > "src/data.json"
 {
 	echo ":: StoryStylesheet [stylesheet]"
-	sass src/.scss \
-		--no-source-map
+	sass src/.scss --no-source-map
 } > "dist/css.tw"
 {
 	tmp="$(mktemp)"
 	echo ":: StoryScript [script]"
-	tsc src/_.ts \
-		--outFile "$tmp" \
-		--lib esnext,dom
+	tsc src/_.ts --outFile "$tmp" --lib esnext,dom
 	cat "$tmp"
 	rm "$tmp"
 } > "dist/js.tw"
@@ -43,10 +40,10 @@ echo "$JSON" > "src/data.json"
 } > "dist/.tw"
 readarray -t CHAR < <(cat src/data.json | jq -r ".characters | keys[]")
 LEN="$(cat src/data.json | jq ".characters | length")"
-cat << EOF > "dist/main.tw"
-:: Main
-Please choose one of these ''$LEN'' characters:
-EOF
+{
+	echo ":: Main"
+	echo "Please choose one of these ''$LEN'' characters:"
+} > "dist/main.tw"
 for c in "${CHAR[@]}"; do
 	echo -e ":: $c [character]\n<<char \"$c\">>" > "dist/$c.tw"
 	echo "# [[${c^}|$c]]" >> dist/main.tw
