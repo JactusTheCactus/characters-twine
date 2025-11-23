@@ -17,6 +17,7 @@ _:
 init:
   ifid: 56336B7E-6043-4D9E-803A-8FF595EE359B
   start: Main
+title: Characters
 characters:
   hound:
     <<: *char
