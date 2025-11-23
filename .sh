@@ -17,7 +17,7 @@ fi
 	cd src
 	YML="$(cat data.yml)"
 	JSON="$(echo "$YML" | yq -o=json ".")"
-	JSON="$(echo "$JSON" | jq "del(._)")"
+	#JSON="$(echo "$JSON" | jq "del(._)")"
 	echo "$JSON" > data.json
 	getData() {
 		cat data.json | jq "$1"
