@@ -30,7 +30,15 @@ characters:
     <<: *char
     names:
       name: Morrigan
-      pronunciation: [M, *omega, *1, r, *schwa, gy, *2, "n"]
+      pronunciation:
+        - M
+        - *omega
+        - *1
+        - r
+        - *schwa
+        - gy
+        - *2
+        - "n"
     species: Reaper
     sex: Female
     extra:
