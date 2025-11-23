@@ -9,11 +9,15 @@
     "char": {
       "names": {
         "name": "",
-        "pronunciation": []
+        "pronunciation": [
+          null
+        ]
       },
-      "species": null,
+      "species": "",
       "sex": "Neuter",
-      "extra": []
+      "extra": [
+        null
+      ]
     }
   },
   "init": {
