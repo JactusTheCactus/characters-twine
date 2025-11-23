@@ -1,4 +1,21 @@
 {
+  "_": {
+    "u": [
+      "ω",
+      "ə",
+      "́",
+      "̀"
+    ],
+    "char": {
+      "names": {
+        "name": null,
+        "pronunciation": []
+      },
+      "species": null,
+      "sex": "Neuter",
+      "extra": []
+    }
+  },
   "init": {
     "ifid": "56336B7E-6043-4D9E-803A-8FF595EE359B",
     "start": "Main"
