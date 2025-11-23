@@ -50,3 +50,4 @@ for c in "${CHAR[@]}"; do
 done
 cp src/*.tw dist
 tweego dist -o index.html
+prettier . --write
