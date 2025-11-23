@@ -43,27 +43,6 @@
   },
   "title": "Characters",
   "characters": {
-    "_": {
-      "names": {
-        "name": "John Doe",
-        "pron": [
-          [
-            "〈",
-            "d",
-            "ʒ",
-            "〉",
-            "on"
-          ],
-          [
-            "d",
-            "ω"
-          ]
-        ]
-      },
-      "species": "Human",
-      "sex": "Neuter",
-      "extra": []
-    },
     "hound": {
       "names": {
         "name": "Hound",
