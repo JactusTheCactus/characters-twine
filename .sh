@@ -32,8 +32,7 @@ fi
 	{
 		echo ":: StoryTitle"
 		cat data.json | jq -r ".title"
-		echo
-		echo ":: StoryData"
+		echo -e "\n:: StoryData"
 		cat data.json | jq ".init"
 	} > .tw
 )
