@@ -18,9 +18,6 @@ fi
 	YML="$(cat data.yml)"
 	JSON="$(echo "$YML" | yq -o=json ".")"
 	echo "$JSON" > data.json
-	getData() {
-		cat data.json | jq "$1"
-	}
 	{
 		echo ":: StoryStylesheet [stylesheet]"
 		sass .scss --no-source-map
@@ -33,13 +30,11 @@ fi
 		rm "$tmp"
 	} > js.tw
 	{
-		cat << EOF
-:: StoryTitle
-Characters
-
-:: StoryData
-EOF
-		getData ".init"
+		echo ":: StoryTitle"
+		echo "Characters"
+		echo
+		echo ":: StoryData"
+		cat data.json | jq ".init"
 	} > .tw
 )
 tweego src -o index.html
