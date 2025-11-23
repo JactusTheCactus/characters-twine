@@ -31,7 +31,7 @@ fi
 	} > js.tw
 	{
 		echo ":: StoryTitle"
-		cat data.json | jq ".title"
+		cat data.json | jq -r ".title"
 		echo
 		echo ":: StoryData"
 		cat data.json | jq ".init"
