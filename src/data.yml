@@ -7,9 +7,9 @@ _:
     - &2 "\u0300"
   char: &char
     names:
-      name: !!str
+      name:
       pronunciation: []
-    species: !!str
+    species:
     sex: "Neuter"
     extra: []
 init:
