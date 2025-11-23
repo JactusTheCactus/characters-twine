@@ -1,36 +1,80 @@
 {
-  "_": {
-    "u": [
-      "ω",
-      "ə",
-      "́",
-      "̀"
+  "_": [
+    [
+      [
+        "〈",
+        "〉"
+      ],
+      [
+        "ω",
+        "ə",
+        "ʒ"
+      ],
+      [
+        "́",
+        "̀"
+      ]
     ],
-    "char": {
+    {
       "names": {
-        "name": "",
-        "pronunciation": [
-          ""
+        "name": "John Doe",
+        "pron": [
+          [
+            "〈",
+            "d",
+            "ʒ",
+            "〉",
+            "on"
+          ],
+          [
+            "d",
+            "ω"
+          ]
         ]
       },
-      "species": "",
+      "species": "Human",
       "sex": "Neuter",
-      "extra": [
-        ""
-      ]
+      "extra": []
     }
-  },
+  ],
   "init": {
     "ifid": "56336B7E-6043-4D9E-803A-8FF595EE359B",
     "start": "Main"
   },
   "title": "Characters",
   "characters": {
+    "_": {
+      "names": {
+        "name": "John Doe",
+        "pron": [
+          [
+            "〈",
+            "d",
+            "ʒ",
+            "〉",
+            "on"
+          ],
+          [
+            "d",
+            "ω"
+          ]
+        ]
+      },
+      "species": "Human",
+      "sex": "Neuter",
+      "extra": []
+    },
     "hound": {
       "names": {
         "name": "Hound",
-        "pronunciation": [
-          "H[a-u]nd"
+        "pron": [
+          [
+            "h",
+            "〈",
+            "au",
+            "〉",
+            "nd"
+          ]
         ]
       },
       "species": "Changeling",
@@ -42,15 +86,17 @@
     "morrigan": {
       "names": {
         "name": "Morrigan",
-        "pronunciation": [
-          "M",
-          "ω",
-          "́",
-          "r",
-          "ə",
-          "gy",
-          "̀",
-          "n"
+        "pron": [
+          [
+            "M",
+            "ω",
+            "́",
+            "r",
+            "ə",
+            "gy",
+            "̀",
+            "n"
+          ]
         ]
       },
       "species": "Reaper",

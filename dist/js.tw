@@ -6,12 +6,11 @@ fetch("src/data.json")
     Object.entries(data.characters)
         .forEach(function (_a) {
         var k = _a[0], v = _a[1];
-        var pron = v.names.pronunciation;
-        if (Array.isArray(pron)) {
-            pron = pron
-                .join("");
+        if (Array.isArray(v.names.pron)) {
+            v.names.pron = v.names.pron
+                .map(function (i) { return i.join(""); })
+                .join("\u00B7");
         }
-        v.names.pronunciation = pron;
         State.variables.characters[k] = v;
     });
     Engine.play("Main");

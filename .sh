@@ -13,27 +13,43 @@ else
 	alias sass="npx sass"
 	alias tsc="npx tsc"
 fi
-(
-	cd src
-	YML="$(cat data.yml)"
-	JSON="$(echo "$YML" | yq -o=json ".")"
-	echo "$JSON" > data.json
-	{
-		echo ":: StoryStylesheet [stylesheet]"
-		sass .scss --no-source-map
-	} > css.tw
-	{
-		tmp="$(mktemp)"
-		echo ":: StoryScript [script]"
-		tsc _.ts --outFile "$tmp" --lib esnext,dom
-		cat "$tmp"
-		rm "$tmp"
-	} > js.tw
-	{
-		echo ":: StoryTitle"
-		cat data.json | jq -r ".title"
-		echo ":: StoryData"
-		cat data.json | jq ".init"
-	} > .tw
-)
-tweego src -o index.html
+mkdir -p dist
+rm dist/*
+YML="$(cat src/data.yml)"
+JSON="$(echo "$YML" | yq -o=json ".")"
+if ! flag local; then
+	JSON="$(echo "$JSON" | jq "del(.characters._)")"
+fi
+echo "$JSON" > "src/data.json"
+{
+	echo ":: StoryStylesheet [stylesheet]"
+	sass src/.scss \
+		--no-source-map
+} > "dist/css.tw"
+{
+	tmp="$(mktemp)"
+	echo ":: StoryScript [script]"
+	tsc src/_.ts \
+		--outFile "$tmp" \
+		--lib esnext,dom
+	cat "$tmp"
+	rm "$tmp"
+} > "dist/js.tw"
+{
+	echo ":: StoryTitle"
+	cat src/data.json | jq -r ".title"
+	echo ":: StoryData"
+	cat src/data.json | jq ".init"
+} > "dist/.tw"
+readarray -t CHAR < <(cat src/data.json | jq -r ".characters | keys[]")
+LEN="$(cat src/data.json | jq ".characters | length")"
+cat << EOF > "dist/main.tw"
+:: Main
+Please choose one of these ''$LEN'' characters:
+EOF
+for c in "${CHAR[@]}"; do
+	echo -e ":: $c [character]\n<<char \"$c\">>" > "dist/$c.tw"
+	echo "# [[${c^}|$c]]" >> dist/main.tw
+done
+cp src/*.tw dist
+tweego dist -o index.html
