@@ -129,8 +129,7 @@ body .passage h1 {
 fetch("src/data.json")
     .then(function (response) { return response.json(); })
     .then(function (data) {
-    Object.entries(data.characters)
-        .forEach(function (_a) {
+    Object.entries(data.characters).forEach(function (_a) {
         var k = _a[0], v = _a[1];
         if (Array.isArray(v.names.pron)) {
             v.names.pron = v.names.pron
