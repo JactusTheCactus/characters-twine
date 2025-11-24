@@ -14,7 +14,7 @@ fetch("src/data.json")
 init:{
 ifid:string
 start:string
-}characters:Record<string,Char>
+};characters:Record<string,Char>
 })=>{
 Object.entries(data.characters)
 .forEach(([k,v]:[string,Char])=>{
