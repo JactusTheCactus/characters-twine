@@ -24,7 +24,7 @@ fetch("src/data.json")
 					v.names.pron = (v.names.pron as Array<Array<string>>)
 						.map((i) => i.join(""))
 						.join("\u{B7}");
-					v.species = (v.species as Array<string>).join(" | ")
+					v.species = (v.species as Array<string>).join(" | ");
 					(State.variables as any).characters[k] = v;
 				},
 			);
