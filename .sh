@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 shopt -s expand_aliases
-test() {
+log() {
 	echo "$1 =========="
 }
 flag() {
@@ -34,19 +34,13 @@ echo "$JSON" > "src/data.json"
 	echo ":: StoryStylesheet [stylesheet]"
 	sass src/.scss --no-source-map
 } > "dist/css.tw"
-#{
-	test 1
+{
 	tmp="dist/_.js"
-	test 2
 	echo ":: StoryScript [script]"
-	test 3
 	tsc src/_.ts --outFile "$tmp" --lib esnext,dom
-	test 4
 	cat "$tmp"
-	test 5
 	rm "$tmp"
-	test 6
-#} > "dist/js.tw"
+} > "dist/js.tw"
 {
 	echo ":: StoryTitle"
 	cat src/data.json | jq -r ".title"
