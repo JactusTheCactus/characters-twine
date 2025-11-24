@@ -17,8 +17,8 @@ init:
   start: Main
 title: Characters
 characters:
-  _: 
-    <<: *char 
+  _:
+    <<: *char
   hound:
     <<: *char
     names:
