@@ -10,23 +10,24 @@ _:
     names:
       name: John Doe
       pron:
-        - [*lb, d, *ezh, *rb, on]
-        - [d, *omega]
+        - [*lb,d,*ezh,*rb,on]
+        - [d,*omega]
     species: Human
     sex: Neuter
-    extra: []
+    extra:
+      -
 init:
   ifid: 56336B7E-6043-4D9E-803A-8FF595EE359B
   start: Main
 title: Characters
 characters:
-  _: { <<: *char }
+  _: {<<: *char}
   hound:
     <<: *char
     names:
       name: Hound
       pron:
-        - [h, *lb, au, *rb, nd]
+        - [h,*lb,au,*rb,nd]
     species: Changeling
     sex: Female
     extra:
@@ -36,7 +37,7 @@ characters:
     names:
       name: Morrigan
       pron:
-        - [M, *omega, *1, r, *schwa, gy, *2, n]
+        - [M,*omega,*1,r,*schwa,gy,*2,n]
     species: Reaper
     sex: Female
     extra:
