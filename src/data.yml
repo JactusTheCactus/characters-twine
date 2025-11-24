@@ -26,21 +26,20 @@ init:
   start: Main
 title: Characters
 characters:
-    _: { <<: *char }
-    hound:
-      {
-        <<: *char,
-        names: { name: Hound, pron: [[h, *lb, au, *rb, nd]] },
-        species: Changeling,
-        sex: Female,
-        extra: ["Shapeshifts into a large, black Wolf"],
-      }
-    morrigan:
-      {
-        <<: *char,
-        names:
-          { name: Morrigan, pron: [[M, *omega, *1, r, *schwa, gy, *2, n]] },
-        species: Reaper,
-        sex: Female,
-        extra: [Wields a scythe, Killing Touch],
-      }
+  _: { <<: *char }
+  hound:
+    {
+      <<: *char,
+      names: { name: Hound, pron: [[h, *lb, au, *rb, nd]] },
+      species: Changeling,
+      sex: Female,
+      extra: ["Shapeshifts into a large, black Wolf"],
+    }
+  morrigan:
+    {
+      <<: *char,
+      names: { name: Morrigan, pron: [[M, *omega, *1, r, *schwa, gy, *2, n]] },
+      species: Reaper,
+      sex: Female,
+      extra: [Wields a scythe, Killing Touch],
+    }
