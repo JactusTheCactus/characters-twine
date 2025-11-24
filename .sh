@@ -19,18 +19,14 @@ else
 	alias tsc="npx tsc"
 	alias prettier="npx prettier"
 fi
-fmt() {
-	prettier src --write
-}
 mkdir -p dist
 rm dist/*
 YML="$(cat src/data.yml)"
 JSON="$(echo "$YML" | yq -o=json ".")"
 #if ! flag local; then
-	JSON="$(echo "$JSON" | jq "del(.characters._)")"
+	#JSON="$(echo "$JSON" | jq "del(.characters._)")"
 #fi
 echo "$JSON" > "src/data.json"
-fmt
 {
 	echo ":: StoryStylesheet [stylesheet]"
 	sass src/.scss --no-source-map
@@ -60,4 +56,4 @@ for c in "${CHAR[@]}"; do
 done
 cp src/*.tw dist
 tweego dist -o index.html
-fmt
+prettier src --write
