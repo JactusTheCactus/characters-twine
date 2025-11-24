@@ -27,7 +27,7 @@ rm -r dist/*
 YML="$(cat src/data.yml)"
 JSON="$(echo "$YML" | yq -o=json ".")"
 if ! flag local; then
-	JSON="$(echo "$JSON" | jq "del(.characters._)")"
+	: #JSON="$(echo "$JSON" | jq "del(.characters._)")"
 fi
 echo "$JSON" > "src/data.json"
 {
