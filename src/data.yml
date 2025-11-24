@@ -26,8 +26,7 @@ init:
   start: Main
 title: Characters
 characters:
-  {
-    _: { <<: *char },
+    _: { <<: *char }
     hound:
       {
         <<: *char,
@@ -35,7 +34,7 @@ characters:
         species: Changeling,
         sex: Female,
         extra: ["Shapeshifts into a large, black Wolf"],
-      },
+      }
     morrigan:
       {
         <<: *char,
@@ -44,5 +43,4 @@ characters:
         species: Reaper,
         sex: Female,
         extra: [Wields a scythe, Killing Touch],
-      },
-  }
+      }
