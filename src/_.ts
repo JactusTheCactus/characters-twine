@@ -25,6 +25,7 @@ fetch("src/data.json")
 						.map((i) => i.join(""))
 						.join("\u{B7}");
 					v.species = (v.species as Array<string>).join(" | ");
+					v.extra = v.extra.filter(Boolean);
 					(State.variables as any).characters[k] = v;
 				},
 			);
