@@ -6,12 +6,12 @@ _:
       - &ezh "\u0292"
     - - &1 "\u0301"
       - &2 "\u0300"
-  - &char {
-      names: { name: John Doe, pron: [[*lb, d, *ezh, *rb, on], [d, *omega]] },
-      species: Human,
-      sex: Neuter,
-      extra: [],
-    }
+  - &char 
+      names: { name: John Doe, pron: [[*lb, d, *ezh, *rb, on], [d, *omega]] }
+      species: Human
+      sex: Neuter
+      extra: []
+    
 init:
   ifid: 56336B7E-6043-4D9E-803A-8FF595EE359B
   start: Main
