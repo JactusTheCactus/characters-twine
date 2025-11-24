@@ -15,7 +15,7 @@
 			},
 			"species": "Human",
 			"sex": "Neuter",
-			"extra": []
+			"extra": [null]
 		}
 	],
 	"init": {
@@ -34,7 +34,7 @@
 			},
 			"species": "Human",
 			"sex": "Neuter",
-			"extra": []
+			"extra": [null]
 		},
 		"hound": {
 			"names": {

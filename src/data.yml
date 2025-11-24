@@ -1,27 +1,21 @@
 _:
-  -
-    -
-      - &lb "\u2329"
+  - - - &lb "\u2329"
       - &rb "\u232A"
-    -
-      - &omega "\u03C9"
+    - - &omega "\u03C9"
       - &schwa "\u0259"
       - &ezh "\u0292"
-    -
-      - &1 "\u0301"
+    - - &1 "\u0301"
       - &2 "\u0300"
   - &char
     names:
       name: John Doe
       pron:
-        -
-          - *lb
+        - - *lb
           - d
           - *ezh
           - *rb
           - on
-        -
-          - d
+        - - d
           - *omega
     species: Human
     sex: Neuter
