@@ -125,21 +125,7 @@ body .passage .sex--n::after {
 }
 body .passage h1 {
   text-decoration: underline;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript">State.variables.characters = {};
-fetch("src/data.json")
-    .then(function (response) { return response.json(); })
-    .then(function (data) {
-    Object.entries(data.characters).forEach(function (_a) {
-        var k = _a[0], v = _a[1];
-        v.names.name = v.names.name.join(" ");
-        v.names.pron = v.names.pron
-            .map(function (i) { return i.join(""); })
-            .join("\u00B7");
-        State.variables.characters[k] = v;
-    });
-    Engine.play("Main");
-})
-    .catch(function (error) { return console.error("Error loading JSON:", error); });</script><tw-passagedata pid="1" name="_" tags="character" position="100,100" size="100,100">&lt;&lt;char &quot;_&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="hound" tags="character" position="225,100" size="100,100">&lt;&lt;char &quot;hound&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="morrigan" tags="character" position="350,100" size="100,100">&lt;&lt;char &quot;morrigan&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="StoryInit" tags="" position="475,100" size="100,100">&lt;&lt;widget &quot;sex&quot;&gt;&gt;&lt;&lt;set _sex to $args[0]&gt;&gt;&lt;&lt;if _sex is &quot;Male&quot;&gt;&gt;@@.sex--m;@@&lt;&lt;elseif _sex is &quot;Female&quot;&gt;&gt;@@.sex--f;@@&lt;&lt;else&gt;&gt;@@.sex--n;@@&lt;&lt;/if&gt;&gt;&lt;&lt;/widget&gt;&gt;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="_" tags="character" position="100,100" size="100,100">&lt;&lt;char &quot;_&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="hound" tags="character" position="225,100" size="100,100">&lt;&lt;char &quot;hound&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="morrigan" tags="character" position="350,100" size="100,100">&lt;&lt;char &quot;morrigan&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="StoryInit" tags="" position="475,100" size="100,100">&lt;&lt;widget &quot;sex&quot;&gt;&gt;&lt;&lt;set _sex to $args[0]&gt;&gt;&lt;&lt;if _sex is &quot;Male&quot;&gt;&gt;@@.sex--m;@@&lt;&lt;elseif _sex is &quot;Female&quot;&gt;&gt;@@.sex--f;@@&lt;&lt;else&gt;&gt;@@.sex--n;@@&lt;&lt;/if&gt;&gt;&lt;&lt;/widget&gt;&gt;
 &lt;&lt;widget &quot;char&quot;&gt;&gt;&lt;&lt;set _c to $characters[$args[0]]&gt;&gt;&lt;h1&gt;_c.names.name^^&lt;&lt;sex _c.sex&gt;&gt;^^&lt;/h1&gt;&lt;dl&gt;&lt;dt&gt;&#39;&#39;Pronunciation&#39;&#39;&lt;/dt&gt;&lt;dd&gt;&amp;lt;&lt;&lt;print _c.names.pron&gt;&gt;&amp;gt;&lt;/dd&gt;&lt;dt&gt;&#39;&#39;Species&#39;&#39;&lt;/dt&gt;&lt;dd&gt;_c.species&lt;/dd&gt;&lt;&lt;if _c.extra.length&gt;&gt;&lt;dt&gt;&#39;&#39;Extra&#39;&#39;&lt;/dt&gt;&lt;&lt;for _i range _c.extra&gt;&gt;&lt;dd&gt;_i&lt;/dd&gt;&lt;&lt;/for&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;/dl&gt;&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="Main" tags="" position="600,100" size="100,100">Please choose one of these &#39;&#39;3&#39;&#39; characters:
 # [[_|_]]
 # [[Hound|hound]]

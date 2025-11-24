@@ -13,7 +13,7 @@
 					["d", "ω"]
 				]
 			},
-			"species": "Human",
+			"species": ["Human"],
 			"sex": "Neuter",
 			"extra": [null]
 		}
@@ -32,7 +32,7 @@
 					["d", "ω"]
 				]
 			},
-			"species": "Human",
+			"species": ["Human"],
 			"sex": "Neuter",
 			"extra": [null]
 		},
@@ -41,7 +41,7 @@
 				"name": ["Hound"],
 				"pron": [["h", "〈", "au", "〉", "nd"]]
 			},
-			"species": "Changeling",
+			"species": ["Changeling"],
 			"sex": "Female",
 			"extra": ["Shapeshifts into a large, black Wolf"]
 		},
@@ -50,7 +50,7 @@
 				"name": ["Morrigan"],
 				"pron": [["M", "ω", "́", "r", "ə", "gy", "̀", "n"]]
 			},
-			"species": "Reaper",
+			"species": ["Reaper"],
 			"sex": "Female",
 			"extra": ["Wields a scythe", "Killing Touch"]
 		}

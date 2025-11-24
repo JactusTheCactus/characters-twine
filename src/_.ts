@@ -3,7 +3,7 @@ interface Char {
 		name: Array<string> | string;
 		pron: Array<Array<string>> | string;
 	};
-	species: Array<string>|string;
+	species: Array<string> | string;
 	sex: "Male" | "Female" | "Neuter";
 	extra: Array<string>;
 }
