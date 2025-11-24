@@ -34,7 +34,7 @@ echo "$JSON" > "src/data.json"
 	echo ":: StoryStylesheet [stylesheet]"
 	sass src/.scss --no-source-map
 } > "dist/css.tw"
-{
+#{
 	test 1
 	tmp="dist/_.js"
 	test 2
@@ -46,7 +46,7 @@ echo "$JSON" > "src/data.json"
 	test 5
 	rm "$tmp"
 	test 6
-} > "dist/js.tw"
+#} > "dist/js.tw"
 {
 	echo ":: StoryTitle"
 	cat src/data.json | jq -r ".title"
