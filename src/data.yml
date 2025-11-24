@@ -8,7 +8,9 @@ _:
       - &2 "\u0300"
   - &char
     names:
-      name: John Doe
+      name:
+        - John
+        - Doe
       pron:
         - - *lb
           - d
@@ -31,7 +33,8 @@ characters:
   hound:
     <<: *char
     names:
-      name: Hound
+      name:
+        - Hound
       pron:
         - - h
           - *lb
@@ -45,7 +48,8 @@ characters:
   morrigan:
     <<: *char
     names:
-      name: Morrigan
+      name:
+        - Morrigan
       pron:
         - - M
           - *omega
