@@ -21,6 +21,7 @@ _:
           - *omega
     species:
       - Human
+      - Dummy
     sex: Neuter
     extra:
       -
