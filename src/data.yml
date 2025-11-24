@@ -7,9 +7,7 @@ _:
     - - &1 "\u0301"
       - &2 "\u0300"
   - &char
-    names:
-      name: John Doe
-      pron: [[*lb, d, *ezh, *rb, on], [d, *omega]]
+    names: {name: John Doe,pron: [[*lb, d, *ezh, *rb, on], [d, *omega]]}
     species: Human
     sex: Neuter
     extra: []
