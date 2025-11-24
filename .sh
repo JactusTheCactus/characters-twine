@@ -3,9 +3,12 @@ set -euo pipefail
 shopt -s expand_aliases
 flag() {
 	for f in "$@"; do
-		[[ -e ".flags/$f" ]]
-		|| [[ "$f" = "new" ]]
-		|| return 1
+		if [[ "$f" = "new" ]]; then
+			continue
+		fi
+		if ! [[ -e ".flags/$f" ]]; then
+			return 1
+		fi
 	done
 }
 if flag local; then
