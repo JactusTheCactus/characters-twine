@@ -1,20 +1,32 @@
 _:
-  - - - &lb "\u2329"
+  -
+    -
+      - &lb "\u2329"
       - &rb "\u232A"
-    - - &omega "\u03C9"
+    -
+      - &omega "\u03C9"
       - &schwa "\u0259"
       - &ezh "\u0292"
-    - - &1 "\u0301"
+    -
+      - &1 "\u0301"
       - &2 "\u0300"
   - &char
     names:
       name: John Doe
       pron:
-        - [*lb, d, *ezh, *rb, on]
-        - [d, *omega]
+        -
+          - *lb
+          - d
+          - *ezh
+          - *rb
+          - on
+        - 
+          - d
+          - *omega
     species: Human
     sex: Neuter
-    extra: []
+    extra:
+      -
 init:
   ifid: 56336B7E-6043-4D9E-803A-8FF595EE359B
   start: Main
@@ -27,7 +39,12 @@ characters:
     names:
       name: Hound
       pron:
-        - [h, *lb, au, *rb, nd]
+        - 
+          - h
+          - *lb
+          - au
+          - *rb
+          - nd
     species: Changeling
     sex: Female
     extra:
@@ -37,7 +54,15 @@ characters:
     names:
       name: Morrigan
       pron:
-        - [M, *omega, *1, r, *schwa, gy, *2, n]
+        - 
+          - M
+          - *omega
+          - *1
+          - r
+          - *schwa
+          - gy
+          - *2
+          - n
     species: Reaper
     sex: Female
     extra:
