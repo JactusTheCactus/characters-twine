@@ -22,7 +22,7 @@ fetch("src/data.json")
 				([k, v]: [string, Char]) => {
 					v.names.name = (v.names.name as Array<string>)
 						.join(" ");
-					v.names.pron = v.names.pron
+					v.names.pron = (v.names.pron as Array<Array<string>>)
 						.map((i) => i.join(""))
 						.join("\u{B7}");
 					(State.variables as any).characters[k] = v;
