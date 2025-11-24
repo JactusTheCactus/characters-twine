@@ -6,7 +6,9 @@ fetch("src/data.json")
     Object.entries(data.characters).forEach(function (_a) {
         var k = _a[0], v = _a[1];
         v.names.name = v.names.name.join(" ");
-        v.names.pron = v.names.pron.map(function (i) { return i.join(""); }).join("\u00B7");
+        v.names.pron = v.names.pron
+            .map(function (i) { return i.join(""); })
+            .join("\u00B7");
         v.species = v.species.join(" | ");
         State.variables.characters[k] = v;
     });
