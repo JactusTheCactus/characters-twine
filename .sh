@@ -22,6 +22,7 @@ JSON="$(echo "$YML" | yq -o=json ".")"
 	JSON="$(echo "$JSON" | jq "del(.characters._)")"
 #fi
 echo "$JSON" > "src/data.json"
+prettier . --write
 {
 	echo ":: StoryStylesheet [stylesheet]"
 	sass src/.scss --no-source-map
@@ -51,4 +52,3 @@ for c in "${CHAR[@]}"; do
 done
 cp src/*.tw dist
 tweego dist -o index.html
-prettier . --write
