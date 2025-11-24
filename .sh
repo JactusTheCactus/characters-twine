@@ -15,7 +15,7 @@ else
 	alias prettier="npx prettier"
 fi
 fmt() {
-	prettier . --write
+	prettier src --write
 }
 mkdir -p dist
 rm dist/*
