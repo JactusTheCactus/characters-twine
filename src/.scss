@@ -24,7 +24,7 @@ body {
 				&-#{$key} {
 					color: #{map.get($specs, c)};
 					&::after {
-						content: #{map.get($specs, i)};
+						content: "#{map.get($specs, i)}";
 					}
 				}
 			}
