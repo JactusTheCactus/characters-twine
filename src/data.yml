@@ -42,9 +42,4 @@ characters:
     sex: Female
     extra:
       - Shapeshifts into a large, black Wolf
-  morrigan:
-    <<: *char
-    names: { name: Morrigan, pron: [[M, *omega, *1, r, *schwa, gy, *2, n]] }
-    species: Reaper
-    sex: Female
-    extra: [Wields a scythe, Killing Touch]
+  morrigan: {<<: *char,names: { name: Morrigan, pron: [[M, *omega, *1, r, *schwa, gy, *2, n]] },species: Reaper,sex: Female,extra: [Wields a scythe, Killing Touch]}
