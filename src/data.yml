@@ -6,32 +6,7 @@ _:
       - &ezh "\u0292"
     - - &1 "\u0301"
       - &2 "\u0300"
-  - &char {
-      names: { name: John Doe, pron: [[*lb, d, *ezh, *rb, on], [d, *omega]] },
-      species: Human,
-      sex: Neuter,
-      extra: [],
-    }
-init: { ifid: 56336B7E-6043-4D9E-803A-8FF595EE359B, start: Main }
+  - &char {names: {name: John Doe,pron: [[*lb,d,*ezh,*rb,on],[d,*omega]]},species: Human,sex: Neuter,extra: []}
+init: {ifid: 56336B7E-6043-4D9E-803A-8FF595EE359B,start: Main}
 title: Characters
-characters:
-  {
-    _: { <<: *char },
-    hound:
-      {
-        <<: *char,
-        names: { name: Hound, pron: [[h, *lb, au, *rb, nd]] },
-        species: Changeling,
-        sex: Female,
-        extra: [Shapeshifts into a large, black Wolf],
-      },
-    morrigan:
-      {
-        <<: *char,
-        names:
-          { name: Morrigan, pron: [[M, *omega, *1, r, *schwa, gy, *2, n]] },
-        species: Reaper,
-        sex: Female,
-        extra: [Wields a scythe, Killing Touch],
-      },
-  }
+characters: {_: {<<: *char},hound: {<<: *char,names: {name: Hound,pron: [[h,*lb,au,*rb,nd]]},species: Changeling,sex: Female,extra: ["Shapeshifts into a large, black Wolf"]},morrigan: {<<: *char,names: {name: Morrigan,pron: [[M,*omega,*1,r,*schwa,gy,*2,n]]},species: Reaper,sex: Female,extra: [Wields a scythe,Killing Touch]}}
