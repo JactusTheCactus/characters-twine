@@ -6,7 +6,7 @@ flag() {
 		if [[ "$f" = "new" ]]; then
 			continue
 		fi
-		if ! [[ -e ".flags/$f" ]]; then
+		if [[ ! -e ".flags/$f" ]]; then
 			return 1
 		fi
 	done
