@@ -19,7 +19,8 @@ _:
           - on
         - - d
           - *omega
-    species: Human
+    species:
+      - Human
     sex: Neuter
     extra:
       -
@@ -41,7 +42,8 @@ characters:
           - au
           - *rb
           - nd
-    species: Changeling
+    species:
+      - Changeling
     sex: Female
     extra:
       - Shapeshifts into a large, black Wolf
@@ -59,7 +61,8 @@ characters:
           - gy
           - *2
           - n
-    species: Reaper
+    species:
+      - Reaper
     sex: Female
     extra:
       - Wields a scythe
