@@ -20,7 +20,7 @@ fetch("src/data.json")
 		}) => {
 			Object.entries(data.characters).forEach(
 				([k, v]: [string, Char]) => {
-					v.names.name = v.names.name
+					v.names.name = (v.names.name as Array<string>)
 						.join(" ");
 					v.names.pron = v.names.pron
 						.map((i) => i.join(""))
