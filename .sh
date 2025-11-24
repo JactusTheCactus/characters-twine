@@ -2,7 +2,7 @@
 set -euo pipefail
 shopt -s expand_aliases
 test() {
-	echo "=========="
+	echo "$1 =========="
 }
 flag() {
 	for f in "$@"; do
@@ -30,10 +30,12 @@ JSON="$(echo "$YML" | yq -o=json ".")"
 	#JSON="$(echo "$JSON" | jq "del(.characters._)")"
 #fi
 echo "$JSON" > "src/data.json"
+test 1
 {
 	echo ":: StoryStylesheet [stylesheet]"
 	sass src/.scss --no-source-map
 } > "dist/css.tw"
+test 2
 {
 	tmp="$(mktemp)"
 	echo ":: StoryScript [script]"
@@ -41,23 +43,28 @@ echo "$JSON" > "src/data.json"
 	cat "$tmp"
 	rm "$tmp"
 } > "dist/js.tw"
+test 3
 {
 	echo ":: StoryTitle"
 	cat src/data.json | jq -r ".title"
 	echo ":: StoryData"
 	cat src/data.json | jq ".init"
 } > "dist/.tw"
+test 4
 readarray -t CHAR < <(cat src/data.json | jq -r ".characters | keys[]")
 LEN="$(cat src/data.json | jq ".characters | length")"
+test 5
 {
 	echo ":: Main"
 	echo "Please choose one of these ''$LEN'' characters:"
 } > "dist/main.tw"
+test 6
 mkdir -p characters
 for c in "${CHAR[@]}"; do
 	echo -e ":: $c [character]\n<<char \"$c\">>" > "dist/characters/$c.tw"
 	echo "# [[${c^}|$c]]" >> dist/main.tw
 done
+test 7
 cp src/*.tw dist
 tweego dist -o index.html
 prettier src --write
