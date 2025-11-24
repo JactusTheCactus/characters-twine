@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 shopt -s expand_aliases
+test() {
+	echo "=========="
+}
 flag() {
 	for f in "$@"; do
 		if [[ "$f" = "new" ]]; then
