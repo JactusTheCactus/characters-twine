@@ -3,7 +3,7 @@ interface Char {
 		name: Array<string> | string;
 		pron: Array<Array<string>> | string;
 	};
-	species: string;
+	species: Array<string>|string;
 	sex: "Male" | "Female" | "Neuter";
 	extra: Array<string>;
 }
@@ -22,6 +22,7 @@ fetch("src/data.json")
 				([k, v]: [string, Char]) => {
 					v.names.name = (v.names.name as Array<string>).join(" ");
 					v.names.pron = (v.names.pron as Array<Array<string>>)
+					v.species = (v.species as Array<string>).join(" | ")
 						.map((i) => i.join(""))
 						.join("\u{B7}");
 					(State.variables as any).characters[k] = v;
