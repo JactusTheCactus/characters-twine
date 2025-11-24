@@ -26,15 +26,15 @@ mkdir -p dist
 rm dist/*
 YML="$(cat src/data.yml)"
 JSON="$(echo "$YML" | yq -o=json ".")"
-#if ! flag local; then
-	#JSON="$(echo "$JSON" | jq "del(.characters._)")"
-#fi
+if ! flag local; then
+	JSON="$(echo "$JSON" | jq "del(.characters._)")"
+fi
 echo "$JSON" > "src/data.json"
 {
 	echo ":: StoryStylesheet [stylesheet]"
 	sass src/.scss --no-source-map
 } > "dist/css.tw"
-#{
+{
 	test 1
 	tmp="dist/_.js"
 	test 2
@@ -46,7 +46,7 @@ echo "$JSON" > "src/data.json"
 	test 5
 	rm "$tmp"
 	test 6
-#} > "dist/js.tw"
+} > "dist/js.tw"
 {
 	echo ":: StoryTitle"
 	cat src/data.json | jq -r ".title"
@@ -59,7 +59,7 @@ LEN="$(cat src/data.json | jq ".characters | length")"
 	echo ":: Main"
 	echo "Please choose one of these ''$LEN'' characters:"
 } > "dist/main.tw"
-mkdir -p characters
+mkdir -p dist/characters
 for c in "${CHAR[@]}"; do
 	echo -e ":: $c [character]\n<<char \"$c\">>" > "dist/characters/$c.tw"
 	echo "# [[${c^}|$c]]" >> dist/main.tw
