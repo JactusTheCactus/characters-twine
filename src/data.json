@@ -7,7 +7,7 @@
 		],
 		{
 			"names": {
-				"name": "John Doe",
+				"name": ["John", "Doe"],
 				"pron": [
 					["〈", "d", "ʒ", "〉", "on"],
 					["d", "ω"]
@@ -24,21 +24,9 @@
 	},
 	"title": "Characters",
 	"characters": {
-		"_": {
-			"names": {
-				"name": "John Doe",
-				"pron": [
-					["〈", "d", "ʒ", "〉", "on"],
-					["d", "ω"]
-				]
-			},
-			"species": "Human",
-			"sex": "Neuter",
-			"extra": [null]
-		},
 		"hound": {
 			"names": {
-				"name": "Hound",
+				"name": ["Hound"],
 				"pron": [["h", "〈", "au", "〉", "nd"]]
 			},
 			"species": "Changeling",
@@ -47,7 +35,7 @@
 		},
 		"morrigan": {
 			"names": {
-				"name": "Morrigan",
+				"name": ["Morrigan"],
 				"pron": [["M", "ω", "́", "r", "ə", "gy", "̀", "n"]]
 			},
 			"species": "Reaper",
