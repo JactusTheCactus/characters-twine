@@ -1,6 +1,6 @@
 interface Char {
 	names: {
-		name: Array<string>;
+		name: Array<string> | string;
 		pron: Array<Array<string>> | string;
 	};
 	species: string;
