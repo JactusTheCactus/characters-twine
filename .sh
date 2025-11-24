@@ -37,7 +37,7 @@ test 1
 } > "dist/css.tw"
 test 2
 {
-	tmp="$(mktemp)"
+	tmp="dist/_.js"
 	echo ":: StoryScript [script]"
 	tsc src/_.ts --outFile "$tmp" --lib esnext,dom
 	cat "$tmp"
