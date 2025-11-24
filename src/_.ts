@@ -20,11 +20,11 @@ fetch("src/data.json")
 		}) => {
 			Object.entries(data.characters).forEach(
 				([k, v]: [string, Char]) => {
-					if (Array.isArray(v.names.pron)) {
-						v.names.pron = v.names.pron
-							.map((i) => i.join(""))
-							.join("\u00B7");
-					}
+					v.names.name = v.names.name
+						.join(" ");
+					v.names.pron = v.names.pron
+						.map((i) => i.join(""))
+						.join("\u00B7");
 					(State.variables as any).characters[k] = v;
 				},
 			);
