@@ -24,7 +24,7 @@ fetch("src/data.json")
 						.join(" ");
 					v.names.pron = v.names.pron
 						.map((i) => i.join(""))
-						.join("\u00B7");
+						.join("\u{B7}");
 					(State.variables as any).characters[k] = v;
 				},
 			);
