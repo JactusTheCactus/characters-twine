@@ -12,6 +12,7 @@ else
 	npm ci
 	alias sass="npx sass"
 	alias tsc="npx tsc"
+	alias prettier="npx prettier"
 fi
 mkdir -p dist
 rm dist/*
