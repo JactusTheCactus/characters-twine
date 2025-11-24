@@ -1,89 +1,46 @@
 {
-  "_": [
-    [
-      [
-        "〈",
-        "〉"
-      ],
-      [
-        "ω",
-        "ə",
-        "ʒ"
-      ],
-      [
-        "́",
-        "̀"
-      ]
-    ],
-    {
-      "names": {
-        "name": "John Doe",
-        "pron": [
-          [
-            "〈",
-            "d",
-            "ʒ",
-            "〉",
-            "on"
-          ],
-          [
-            "d",
-            "ω"
-          ]
-        ]
-      },
-      "species": "Human",
-      "sex": "Neuter",
-      "extra": []
-    }
-  ],
-  "init": {
-    "ifid": "56336B7E-6043-4D9E-803A-8FF595EE359B",
-    "start": "Main"
-  },
-  "title": "Characters",
-  "characters": {
-    "hound": {
-      "names": {
-        "name": "Hound",
-        "pron": [
-          [
-            "h",
-            "〈",
-            "au",
-            "〉",
-            "nd"
-          ]
-        ]
-      },
-      "species": "Changeling",
-      "sex": "Female",
-      "extra": [
-        "Shapeshifts into a large, black Wolf"
-      ]
-    },
-    "morrigan": {
-      "names": {
-        "name": "Morrigan",
-        "pron": [
-          [
-            "M",
-            "ω",
-            "́",
-            "r",
-            "ə",
-            "gy",
-            "̀",
-            "n"
-          ]
-        ]
-      },
-      "species": "Reaper",
-      "sex": "Female",
-      "extra": [
-        "Wields a scythe",
-        "Killing Touch"
-      ]
-    }
-  }
+	"_": [
+		[
+			["〈", "〉"],
+			["ω", "ə", "ʒ"],
+			["́", "̀"]
+		],
+		{
+			"names": {
+				"name": "John Doe",
+				"pron": [
+					["〈", "d", "ʒ", "〉", "on"],
+					["d", "ω"]
+				]
+			},
+			"species": "Human",
+			"sex": "Neuter",
+			"extra": []
+		}
+	],
+	"init": {
+		"ifid": "56336B7E-6043-4D9E-803A-8FF595EE359B",
+		"start": "Main"
+	},
+	"title": "Characters",
+	"characters": {
+		"hound": {
+			"names": {
+				"name": "Hound",
+				"pron": [["h", "〈", "au", "〉", "nd"]]
+			},
+			"species": "Changeling",
+			"sex": "Female",
+			"extra": ["Shapeshifts into a large, black Wolf"]
+		},
+		"morrigan": {
+			"names": {
+				"name": "Morrigan",
+				"pron": [["M", "ω", "́", "r", "ə", "gy", "̀", "n"]]
+			},
+			"species": "Reaper",
+			"sex": "Female",
+			"extra": ["Wields a scythe", "Killing Touch"]
+		}
+	}
 }
