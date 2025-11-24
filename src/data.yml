@@ -27,22 +27,21 @@ init:
 title: Characters
 characters:
   _:
-    <<: *char 
+    <<: *char
   hound:
-      <<: *char
-      names:
-        name: Hound
-        pron:
-          -
-            - h
-            - *lb
-            - au
-            - *rb
-            - nd
-      species: Changeling
-      sex: Female
-      extra:
-        - Shapeshifts into a large, black Wolf
+    <<: *char
+    names:
+      name: Hound
+      pron:
+        - - h
+          - *lb
+          - au
+          - *rb
+          - nd
+    species: Changeling
+    sex: Female
+    extra:
+      - Shapeshifts into a large, black Wolf
   morrigan:
     {
       <<: *char,
