@@ -23,7 +23,7 @@ else
 	alias prettier="npx prettier"
 fi
 mkdir -p dist
-rm dist/*
+rm -r dist/*
 YML="$(cat src/data.yml)"
 JSON="$(echo "$YML" | yq -o=json ".")"
 if ! flag local; then
