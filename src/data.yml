@@ -27,7 +27,7 @@ init:
 title: Characters
 characters:
   _:
-    <<: *char 
+    <<: *char
   hound:
     {
       <<: *char,
