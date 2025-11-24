@@ -10,6 +10,7 @@ fetch("src/data.json")
             .map(function (i) { return i.join(""); })
             .join("\u00B7");
         v.species = v.species.join(" | ");
+        v.extra = v.extra.filter(Boolean);
         State.variables.characters[k] = v;
     });
     Engine.play("Main");
