@@ -34,13 +34,13 @@ echo "$JSON" > "src/data.json"
 	echo ":: StoryStylesheet [stylesheet]"
 	sass src/.scss --no-source-map
 } > "dist/css.tw"
-#{
+{
 	tmp="dist/_.js"
 	echo ":: StoryScript [script]"
 	tsc src/_.ts --outFile "$tmp" --lib esnext,dom
 	cat "$tmp"
 	rm "$tmp"
-#} > "dist/js.tw"
+} > "dist/js.tw"
 {
 	echo ":: StoryTitle"
 	cat src/data.json | jq -r ".title"
