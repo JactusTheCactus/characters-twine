@@ -50,8 +50,9 @@ LEN="$(cat src/data.json | jq ".characters | length")"
 	echo ":: Main"
 	echo "Please choose one of these ''$LEN'' characters:"
 } > "dist/main.tw"
+mkdir -p characters
 for c in "${CHAR[@]}"; do
-	echo -e ":: $c [character]\n<<char \"$c\">>" > "dist/$c.tw"
+	echo -e ":: $c [character]\n<<char \"$c\">>" > "dist/characters/$c.tw"
 	echo "# [[${c^}|$c]]" >> dist/main.tw
 done
 cp src/*.tw dist
